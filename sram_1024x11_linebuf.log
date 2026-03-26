@@ -1,0 +1,64 @@
+[2026-03-21 04:24:54.809775] |==============================================================================|
+[2026-03-21 04:24:54.809886] |=========                      OpenRAM v1.2.49                       =========|
+[2026-03-21 04:24:54.809907] |=========                                                            =========|
+[2026-03-21 04:24:54.809921] |=========               VLSI Design and Automation Lab               =========|
+[2026-03-21 04:24:54.809932] |=========        Computer Science and Engineering Department         =========|
+[2026-03-21 04:24:54.809942] |=========            University of California Santa Cruz             =========|
+[2026-03-21 04:24:54.809952] |=========                                                            =========|
+[2026-03-21 04:24:54.809961] |=========          Usage help: openram-user-group@ucsc.edu           =========|
+[2026-03-21 04:24:54.809971] |=========        Development help: openram-dev-group@ucsc.edu        =========|
+[2026-03-21 04:24:54.809981] |=========                See LICENSE for license info                =========|
+[2026-03-21 04:24:54.809991] |==============================================================================|
+[2026-03-21 04:24:54.810005] ** Start: 03/21/2026 04:24:54
+[2026-03-21 04:24:54.810018] Technology: sky130
+[2026-03-21 04:24:54.810028] Total size: 11264 bits
+[2026-03-21 04:24:54.810039] Word size: 11
+Words: 1024
+Banks: 1
+[2026-03-21 04:24:54.810050] RW ports: 0
+R-only ports: 1
+W-only ports: 1
+[2026-03-21 04:24:54.810060] DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+[2026-03-21 04:24:54.810070] DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+[2026-03-21 04:24:54.810079] Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+[2026-03-21 04:24:54.810090] Words per row: None
+[2026-03-21 04:24:54.810103] Output files are: 
+[2026-03-21 04:24:54.810112] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.lvs
+[2026-03-21 04:24:54.810122] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.sp
+[2026-03-21 04:24:54.810132] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.v
+[2026-03-21 04:24:54.810141] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.lib
+[2026-03-21 04:24:54.810150] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.py
+[2026-03-21 04:24:54.810160] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.html
+[2026-03-21 04:24:54.810170] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.log
+[2026-03-21 04:24:54.810179] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.lef
+[2026-03-21 04:24:54.810188] /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.gds
+[2026-03-21 04:25:25.550522] ** Submodules: 30.7 seconds
+[2026-03-21 04:25:25.556578] ** Placement: 0.0 seconds
+[2026-03-21 04:36:42.719500] ** Routing: 677.2 seconds
+[2026-03-21 04:36:42.744911] ** Verification: 0.0 seconds
+[2026-03-21 04:36:42.744980] ** SRAM creation: 707.9 seconds
+[2026-03-21 04:36:42.745002] SP: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.sp
+[2026-03-21 04:36:42.848727] ** Spice writing: 0.1 seconds
+[2026-03-21 04:36:42.848769] DELAY: Writing stimulus...
+[2026-03-21 04:36:43.303977] ** DELAY: 0.5 seconds
+[2026-03-21 04:36:43.392178] GDS: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.gds
+[2026-03-21 04:36:43.876995] ** GDS: 0.5 seconds
+[2026-03-21 04:36:43.877069] LEF: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.lef
+[2026-03-21 04:36:43.881268] ** LEF: 0.0 seconds
+[2026-03-21 04:36:43.881294] LVS: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.lvs.sp
+[2026-03-21 04:36:43.968487] ** LVS writing: 0.1 seconds
+[2026-03-21 04:36:43.968551] LIB: Characterizing... 
+[2026-03-21 04:36:43.983050] WARNING: file elmore.py: line 45: In analytical mode, all ports have the timing of the first read port.
+
+[2026-03-21 04:36:44.409189] WARNING: file elmore.py: line 45: In analytical mode, all ports have the timing of the first read port.
+
+[2026-03-21 04:36:44.854712] WARNING: file elmore.py: line 45: In analytical mode, all ports have the timing of the first read port.
+
+[2026-03-21 04:36:45.474153] ** Characterization: 1.5 seconds
+[2026-03-21 04:36:45.474278] Config: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.py
+[2026-03-21 04:36:45.474299] ** Config: 0.0 seconds
+[2026-03-21 04:36:45.474710] Datasheet: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.html
+[2026-03-21 04:36:45.475210] ** Datasheet: 0.0 seconds
+[2026-03-21 04:36:45.475238] Verilog: Writing to /home/tinkerspace/OpenRAM/gen_bram/sram_1024x11_linebuf.v
+[2026-03-21 04:36:45.475333] ** Verilog: 0.0 seconds
+[2026-03-21 04:36:45.476337] ** End: 710.7 seconds
