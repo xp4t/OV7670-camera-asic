@@ -1,0 +1,38 @@
+# PDK / Libraries
+lib/
+*.db
+*.lib
+*.lef
+*.tf
+*.itf
+*.tluplus
+*.nxtgrd
+*.alib
+*.ndm
+
+# Physical outputs
+*.gds
+*.def
+*.spef
+
+# Logs
+*.log
+*.jou
+*.svf
+
+# Reports
+*.rpt
+*.tim
+*.con
+*.qor
+*.html
+*.sum
+.graph_data.txt
+.sum.index
+
+# Work directories
+WORK/
+cksum_dir/
+
+# Misc
+moduleparamid

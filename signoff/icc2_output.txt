@@ -1,0 +1,126 @@
+ 
+                              IC Compiler II (TM)
+
+                  Version W-2024.09 for linux64 - Aug 26, 2024
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+################################################################################Open_Lib
+open_lib ../floorplanning/OV7670
+Information: Loading library file '/home/rithwik/OV7670-camera-asic/floorplanning/OV7670' (FILE-007)
+Information: Loading library file '/home/rithwik/OV7670-camera-asic/lib/saed32_rvt.ndm' (FILE-007)
+{OV7670}
+open_block top_7_signoff_final
+Information: User units loaded from library 'saed32_rvt|saed32_rvt_std' (LNK-040)
+Opening block 'OV7670:top_7_signoff_final.design' in edit mode
+{OV7670:top_7_signoff_final.design}
+################################################################################Parasitics
+read_parasitic_tech \
+    -tlup ../lib/saed32nm_1p9m_Cmax.lv.tluplus \
+    -name maxTLU \
+    -layermap ../lib/saed32nm_tf_itf_tluplus.map
+NEX(WARNING): parasitic_tech file: /home/rithwik/OV7670-camera-asic/lib/saed32nm_1p9m_Cmax.lv.tluplus already read in, mandatory 1-to-1 map between tluplus file and paraTech
+1
+read_parasitic_tech \
+    -tlup ../lib/saed32nm_1p9m_Cmin.lv.tluplus \
+    -name minTLU \
+    -layermap ../lib/saed32nm_tf_itf_tluplus.map
+NEX(WARNING): parasitic_tech file: /home/rithwik/OV7670-camera-asic/lib/saed32nm_1p9m_Cmin.lv.tluplus already read in, mandatory 1-to-1 map between tluplus file and paraTech
+1
+################################################################################Write_SPEF
+write_parasitics \
+    -format spef \
+    -output ../netlist/OV7670
+[icc2-lic Tue Jun  9 15:19:51 2026] Command 'write_parasitics' requires licenses
+Using libraries: OV7670 saed32_rvt
+Visiting block OV7670:top_7_signoff_final.design
+Design 'top' was successfully linked.
+Information: Design top_7_signoff_final has 303 nets, 0 global routed, 301 detail routed. (NEX-024)
+Warning: Technology layer 'M8' setting 'routing-direction' is not valid (NEX-001)
+Warning: Technology layer 'M9' setting 'routing-direction' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+NEX: extract design top
+Information: The RC mode used is DR for design 'top'. (NEX-022)
+---extraction options---
+Corner: slow
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: fast
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: top_7_signoff_final 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 301 nets are successfully extracted. (NEX-028)
+Information: batch extract takes 0.11 seconds, elapse 0.11 seconds (NEX-015)
+NP[MG]: net para controller 0x8522f800 constructed
+NP[]: App option "time.enable_xcaps_edit" changed to "false"
+Information: The stitching and editing of coupling caps is turned OFF for design 'OV7670:top_7_signoff_final.design'. (TIM-125)
+NP: Building virtual routing context [blockage_aware 1]
+Warning: Technology layer 'M8' setting 'routing-direction' is not valid (NEX-001)
+Warning: Technology layer 'M9' setting 'routing-direction' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+NEX: write corner ID 0 parasitics to ../netlist/OV7670.tlup_max_125.spef 
+spefName ../netlist/OV7670.tlup_max_125.spef, corner name slow 
+NEX: write corner ID 1 parasitics to ../netlist/OV7670.tlup_min_125.spef 
+spefName ../netlist/OV7670.tlup_min_125.spef, corner name fast 
+NEX:Warning write_parasitics supports only Ohm and kOhm as user resistance unit not 1MOhm, we force to set it Ohm.NP[MG]: net para controller (0x8522f800) cleared [CongestionUpdate = 1, clearRcCache = 0, useFrozenSubBlockPara = 0]
+NP[MG]: net para controller 0x8522f800 destructed
+NEX: write_parasitics command finished
+################################################################################Write_Netlist
+write_verilog \
+    -include {pg_netlist} \
+    ../netlist/OV7670_final.v
+1
+################################################################################Write_SDC
+write_sdc -scenario func_fast -output ../netlist/OV7670_func_fast.sdc
+Information: The command 'write_sdc' cleared the undo history. (UNDO-016)
+
+Warning: Multiply cell derates are skipped!
+
+Warning: Multiply net derates are skipped!
+1
+write_sdc -scenario func_slow -output ../netlist/OV7670_func_slow.sdc
+
+Warning: Multiply cell derates are skipped!
+
+Warning: Multiply net derates are skipped!
+1
+save_lib
+Saving library 'OV7670'
+1
+close_block
+Closing block 'OV7670:top_7_signoff_final.design'
+1
+close_lib
+Closing library 'OV7670'
+1
+1
