@@ -196,7 +196,7 @@ The original `inout sda` was refactored to separate `i_sda_in` / `o_sda_oe` port
 
 - **Synopsys Design Compiler** `W-2024.09` — RTL synthesis
 - **Synopsys IC Compiler II** `W-2024.09` — Place & Route, signoff DRC/LVS
-- **Synopsys PrimeTime** — Static timing analysis
+- **Synopsys PrimeTime** `T-2022.03-SP2` — Static timing analysis
 - **Library:** SAED32nm RVT standard cells (1P9M, educational PDK)
 
 ---
