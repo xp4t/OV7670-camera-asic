@@ -154,7 +154,11 @@ Remaining DRCs are spacing rule violations from power stripe / signal congestion
 Total vias: 6262 | Double-via conversion rate: **59.1%** (97.4% on detail-route vias)
 
 ---
+### GDSII Layout
 
+![GDS Layout](https://raw.githubusercontent.com/xp4t/OV7670-camera-asic/main/gdsout.png)
+
+---
 ## Repository Structure
 
 ```
