@@ -3,23 +3,32 @@
 puts "========== Starting ICC2 Flow =========="
 
 # Floorplanning
-source ./floorplanning/step1_data_setup.tcl
-source ./floorplanning/step2_floorplan.tcl
-source ./floorplanning/step3_powerplan.tcl
 
+cd floorplanning
+source step1_data_setup.tcl
+source step2_floorplan.tcl
+source step3_powerplan.tcl
+cd ..
 # Placement
-source ./placement/step4_place.tcl
+cd placement
+source step4_place.tcl
 
 # CTS
-source ./placement/step5_clock_tree_syntesis.tcl
+source step5_clock_tree_syntesis.tcl
 
 # Routing
-source ./placement/step6_route.tcl
+source step6_route.tcl
+cd ..
 
 # Signoff Checks
-source ./signoff/signoff_drc.tcl
 
-# Final Stream Out
-source ./gdsout/step7_finishing.tcl
+cd signoff
+source signoff_drc.tcl
+cd ..
+
+cd gdsout
+source step7_finishing.tcl
+cd ..
+
 
 puts "========== ICC2 Flow Completed =========="
