@@ -1,7 +1,7 @@
 # run_pt.tcl
 
 puts "========== Starting PrimeTime STA =========="
-
-source ./signoff/sta_pt.tcl
-
+cd signoff/
+source sta_pt.tcl
+cd ..
 puts "========== PrimeTime STA Completed =========="
