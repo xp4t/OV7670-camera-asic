@@ -77,7 +77,6 @@ set_attribute [get_layers M5] routing_direction horizontal
 set_attribute [get_layers M6] routing_direction vertical
 set_attribute [get_layers M7] routing_direction horizontal
 
-# FIX: original set M1-M8 as ignored → all signal routing blocked.
 # M1 reserved for std cell rails (follow-pin).
 # M8 left available as top metal if needed.
 # Routing engine uses M2-M7 for signals.
